@@ -57,5 +57,5 @@ runAnalysis <- function() {
   #12. Create a tidy data set with the average of each variable for each activity and each subject.
   tidyData <- aggregate(. ~subject + activity, Data, mean)
   tidyData <- tidyData[order(tidyData$subject, tidyData$activity),]
-  write.table(tidyData, file = "tidyData.txt")
+  write.table(tidyData, file = "tidyData.txt", row.name=FALSE)
 }
